@@ -15,12 +15,12 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .view-toggle{display:flex;gap:10px}
 .view-btn{padding:10px 20px;border:2px solid #894b52;background:white;color:#894b52;border-radius:8px;cursor:pointer;font-weight:600}
 .view-btn.active{background:#894b52;color:white}
-.wine-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:20px}
+.wine-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
 .wine-list{display:flex;flex-direction:column;gap:15px}
-.wine-card{background:white;border-radius:12px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,0.1);min-width:360px}
+.wine-card{background:white;border-radius:12px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,0.1);min-width:260px}
 .wine-card:hover{box-shadow:0 4px 16px rgba(0,0,0,0.15)}
 .wine-name{font-size:20px;font-weight:700;color:#374d5f;margin-bottom:6px}
-.winery-name{font-size:15px;color:#894b52;margin-bottom:12px;font-weight:600}
+.winery-name{font-size:13px;color:#894b52;margin-bottom:12px;font-weight:600}
 .wine-info{border-top:2px solid #f0f0f0;padding-top:12px;margin-top:12px}
 .info-row{display:flex;margin-bottom:6px;font-size:13px}
 .info-label{font-weight:600;color:#374d5f;min-width:90px}
@@ -55,9 +55,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .export-btn{width:100%;background:#4CAF50;color:white;border:none;padding:14px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;margin-top:15px}
 .export-btn:hover{background:#45a049}
 .wine-card-top{display:flex;gap:15px;margin-bottom:15px}
-.wine-thumb{width:100px;height:100px;object-fit:cover;border-radius:8px;cursor:pointer;flex-shrink:0;transition:transform 0.2s}
+.wine-thumb{width:80px;height:80px;object-fit:cover;border-radius:8px;cursor:pointer;flex-shrink:0;transition:transform 0.2s}
 .wine-thumb:hover{transform:scale(1.05)}
-.thumb-placeholder{width:100px;height:100px;background:#f0f0f0;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#ccc;font-size:36px;flex-shrink:0}
+.thumb-placeholder{width:80px;height:80px;background:#f0f0f0;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#ccc;font-size:30px;flex-shrink:0}
 .wine-card-info{flex:1;min-width:0}
 .list-photo{width:80px;height:80px;object-fit:cover;border-radius:8px;cursor:pointer}
 .list-photo-placeholder{width:80px;height:80px;background:#f0f0f0;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#ccc;font-size:24px}
@@ -111,6 +111,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 </select>
 </div>
 </div>
+<div id="limitedBanner" style="display:none"></div>
 <div class="wine-grid" id="grid"></div>
 </div>
 <div class="modal" id="modal">
@@ -169,23 +170,22 @@ function renderList(){var total=0;var weight=0;var h='<table class="list-table">
 function exportXLS(){var data=[];var total=0;var weight=0;list.forEach(function(i){var w=i.wine;var t=w.priceEXW*w.unitsPerBox*i.qty;var wt=w.boxWeight*i.qty;total+=t;weight+=wt;data.push({Wine:w.wine,Winery:w.winery,Region:w.region,Grapes:w.grapes,Vintage:w.vintage,'Units/Box':w.unitsPerBox,'Box Weight':w.boxWeight,'Price EXW':w.priceEXW,'Quantity':i.qty,'Total Bottles':w.unitsPerBox*i.qty,'Weight(kg)':wt.toFixed(2),'Amount':t.toFixed(2)});});var p=Math.ceil(weight/850);data.push({});data.push({Wine:'TOTAL',Winery:'',Region:'',Grapes:'',Vintage:'','Units/Box':'','Box Weight':'','Price EXW':'','Quantity':'','Total Bottles':'','Weight(kg)':weight.toFixed(2),'Amount':total.toFixed(2)});data.push({Wine:'Pallets Required',Winery:p+' (max 850kg each)'});var ws=XLSX.utils.json_to_sheet(data);var wb=XLSX.utils.book_new();XLSX.utils.book_append_sheet(wb,ws,'Selection');XLSX.writeFile(wb,'LaVineria_Selection.xlsx');}
 function render(){
 var g=document.getElementById('grid');
-if(filtered.length===0){g.innerHTML='<div style="text-align:center;padding:60px;color:white"><p>No wines found</p></div>';return;}
+var bannerContainer=document.getElementById('limitedBannerContainer');
 
-var hasLimited=filtered.some(function(w){return w.isLimited;});
 var showingOnlyLimited=document.getElementById('limitedFilter').value==='limited';
 
-var html='';
-if(hasLimited&&showingOnlyLimited){
-html+='<div class="limited-banner">';
-html+='<h3><span class="limited-banner-icon">⚡</span> LIMITED ALLOCATION - SPECIAL PRICING</h3>';
-html+='<div class="limited-banner-content">';
-html+='Exclusive selection with exceptional terms and competitive pricing<br>';
-html+='Limited stock available - First come, first served';
-html+='</div>';
-html+='<div class="limited-banner-highlight">📦 <strong>Special Order Terms:</strong> Minimum order 1 full pallet (100 boxes per producer)</div>';
-html+='</div>';
+if(showingOnlyLimited){
+bannerContainer.innerHTML='<div class="limited-banner" style="margin-bottom:25px"><h3><span class="limited-banner-icon">⚡</span> LIMITED ALLOCATION - SPECIAL PRICING</h3><div class="limited-banner-content">Exclusive selection with exceptional terms and competitive pricing<br>Limited stock available - First come, first served</div><div class="limited-banner-highlight">📦 <strong>Special Order Terms:</strong> Minimum order 1 full pallet (100 boxes per producer)</div></div>';
+}else{
+bannerContainer.innerHTML='';
 }
 
+if(filtered.length===0){
+g.innerHTML='<div style="text-align:center;padding:60px;color:white"><p>No wines found</p></div>';
+return;
+}
+
+var html='';
 if(view==='card'){
 html+=filtered.map(function(w){
 var added=inList(w.id);
