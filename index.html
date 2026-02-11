@@ -30,10 +30,11 @@ header { background: linear-gradient(135deg, var(--bordeaux-dark) 0%, var(--bord
 .logo span { color: var(--gold); }
 .header-subtitle { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 3px; opacity: 0.8; margin-top: 2px; }
 .header-right { text-align: right; font-size: 0.82rem; opacity: 0.85; }
-nav { background: rgba(0,0,0,0.15); padding: 0 40px; overflow-x: auto; white-space: nowrap; }
-nav .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; gap: 0; }
-nav a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.78rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1.5px; padding: 12px 16px; transition: all 0.3s; border-bottom: 2px solid transparent; }
-nav a:hover, nav a.active { color: var(--gold); border-bottom-color: var(--gold); }
+nav { background: rgba(0,0,0,0.15); padding: 10px 20px; overflow-x: auto; }
+nav .nav-inner { max-width: 1600px; margin: 0 auto; display: flex; gap: 6px; justify-content: center; white-space: nowrap; }
+nav a { color: rgba(255,255,255,0.9); text-decoration: none; font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; padding: 8px 12px; transition: all 0.3s; border-radius: 20px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.25); }
+nav a:hover { background: var(--gold); color: var(--bordeaux-dark); border-color: var(--gold); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+nav a.active { background: var(--gold); color: var(--bordeaux-dark); border-color: var(--gold); }
 .hero { background: linear-gradient(135deg, rgba(74,28,35,0.92) 0%, rgba(114,47,55,0.88) 50%, rgba(74,28,35,0.92) 100%), url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1600&q=80') center/cover no-repeat; color: var(--white); text-align: center; padding: 60px 40px; }
 .hero h1 { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 700; margin-bottom: 12px; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
 .hero p { font-size: 1.05rem; opacity: 0.9; max-width: 600px; margin: 0 auto; text-shadow: 0 1px 4px rgba(0,0,0,0.2); }
@@ -102,7 +103,9 @@ footer strong { color: var(--gold); }
   .header-top { padding: 12px 16px; flex-direction: column; text-align: center; }
   .logo { font-size: 1.2rem; }
   .header-right { display: none; }
-  nav a { padding: 8px 10px; font-size: 0.65rem; }
+  nav { padding: 10px 15px; }
+  nav .nav-inner { gap: 6px; }
+  nav a { padding: 7px 12px; font-size: 0.65rem; }
   .hero { padding: 30px 16px; }
   .hero h1 { font-size: 1.8rem; }
   .container { padding: 0 12px; }
@@ -124,23 +127,23 @@ footer strong { color: var(--gold); }
       <div class="logo">La <span>Vineria</span></div>
       <div class="header-subtitle">Wine Portfolio</div>
     </div>
-    <div class="header-right">Export Catalog 2025/2026<br>Updated: 11/02/2026 11:22</div>
+    <div class="header-right">Export Catalog 2025/2026<br>Updated: 11/02/2026 12:21</div>
   </div>
   <nav>
     <div class="nav-inner">
       <a href="#piemonte">Piemonte</a>
-      <a href="#toscana">Toscana</a>
-      <a href="#alto-adige">Alto Adige</a>
-      <a href="#trentino">Trentino</a>
+      <a href="#lombardia">Lombardia</a>
       <a href="#veneto">Veneto</a>
       <a href="#friuli">Friuli</a>
-      <a href="#lombardia">Lombardia</a>
+      <a href="#trentino">Trentino</a>
+      <a href="#alto-adige">Alto Adige</a>
+      <a href="#toscana">Toscana</a>
+      <a href="#marche">Marche</a>
+      <a href="#lazio">Lazio</a>
       <a href="#campania">Campania</a>
       <a href="#puglia">Puglia</a>
-      <a href="#lazio">Lazio</a>
-      <a href="#marche">Marche</a>
-      <a href="#sardegna">Sardegna</a>
       <a href="#sicilia">Sicilia</a>
+      <a href="#sardegna">Sardegna</a>
     </div>
   </nav>
 </header>
@@ -326,6 +329,130 @@ footer strong { color: var(--gold); }
 </div>
 </section>
 
+<section class="region-section" id="lombardia">
+<div class="region-header"><h2>Lombardia</h2><span class="region-badge">1 Winery</span></div>
+
+<div class="cantina-card">
+<div class="cantina-header">
+  <div class="cantina-logo"><img src="https://merkador.it/Varie/CATALOGO%20VINERIA/LOGO%20RADIS.jpg" alt="Radis"></div>
+  <div class="cantina-info"><h3>Radis</h3><div class="cantina-meta">Valtellina &middot; Via Stelvio, 18, 23037 Tirano SO, Italia</div></div>
+</div>
+<table>
+<thead><tr><th class="sku-col">SKU</th><th class="wine-col">Wine</th><th class="format-col">Format</th><th class="type-col">Type</th><th class="price-col">10+ boxes</th><th class="price-col">15+ boxes</th></tr></thead>
+<tbody>
+<tr data-type="red"><td class="sku-col">10006</td><td class="wine-name">Valtellina Superiore DOCG Baitèi 2022</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;14.92</td><td class="price-discount">&euro;14.72</td></tr>
+<tr data-type="red"><td class="sku-col">10007</td><td class="wine-name">Rosso di Valtellina DOC Muràchi 2023</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;11.77</td><td class="price-discount">&euro;11.57</td></tr>
+<tr data-type="rosé"><td class="sku-col">10008</td><td class="wine-name">Alpi Retiche IGT Rosato Stuètt 2025</td><td class="format-col">750ml</td><td><span class="wine-type type-rose">Rosé</span></td><td class="price-col">&euro;12.82</td><td class="price-discount">&euro;12.62</td></tr>
+<tr data-type="red"><td class="sku-col">10009</td><td class="wine-name">Valtellina Superiore DOCG Baitèi 2021</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;15.97</td><td class="price-discount">&euro;15.77</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="region-section" id="veneto">
+<div class="region-header"><h2>Veneto</h2><span class="region-badge">1 Winery</span></div>
+
+<div class="cantina-card">
+<div class="cantina-header">
+  <div class="cantina-logo"><img src="https://martignago.wine/wp-content/uploads/2022/02/logo-martignago-vinaioli-1.png" alt="Martignago"></div>
+  <div class="cantina-info"><h3>Martignago</h3><div class="cantina-meta">Asolo Prosecco &middot; Via Cornuda, 72, 31010 Maser TV, Italia</div></div>
+</div>
+<table>
+<thead><tr><th class="sku-col">SKU</th><th class="wine-col">Wine</th><th class="format-col">Format</th><th class="type-col">Type</th><th class="price-col">10+ boxes</th><th class="price-col">15+ boxes</th></tr></thead>
+<tbody>
+<tr data-type="sparkling"><td class="sku-col">10075</td><td class="wine-name">Colli Trevigiani Colfondo Agricolo 21</td><td class="format-col">750ml</td><td><span class="wine-type type-sparkling">Sparkling</span></td><td class="price-col">&euro;9.22</td><td class="price-discount">&euro;9.01</td></tr>
+<tr data-type="sparkling"><td class="sku-col">10076</td><td class="wine-name">Prosecco Superiore Asolo Brut 24</td><td class="format-col">750ml</td><td><span class="wine-type type-sparkling">Sparkling</span></td><td class="price-col">&euro;9.22</td><td class="price-discount">&euro;9.01</td></tr>
+<tr data-type="sparkling"><td class="sku-col">10077</td><td class="wine-name">Prosecco Superiore Asolo Extra Brut 24</td><td class="format-col">750ml</td><td><span class="wine-type type-sparkling">Sparkling</span></td><td class="price-col">&euro;9.22</td><td class="price-discount">&euro;9.01</td></tr>
+<tr data-type="sparkling"><td class="sku-col">10078</td><td class="wine-name">Prosecco Superiore Asolo Extra Dry 24</td><td class="format-col">750ml</td><td><span class="wine-type type-sparkling">Sparkling</span></td><td class="price-col">&euro;9.22</td><td class="price-discount">&euro;9.01</td></tr>
+<tr data-type="sparkling"><td class="sku-col">10079</td><td class="wine-name">Rosato Brut 23</td><td class="format-col">750ml</td><td><span class="wine-type type-sparkling">Sparkling</span></td><td class="price-col">&euro;8.21</td><td class="price-discount">&euro;8.00</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="region-section" id="friuli">
+<div class="region-header"><h2>Friuli</h2><span class="region-badge">1 Winery</span></div>
+
+<div class="cantina-card">
+<div class="cantina-header">
+  <div class="cantina-logo"><img src="https://arteinvigna.com/wp-content/uploads/2020/09/terre-del-faet.jpg" alt="Terre del Faet"></div>
+  <div class="cantina-info"><h3>Terre del Faet</h3><div class="cantina-meta">Collio &middot; Viale Roma, 82, 34071 Cormons GO, Italia</div></div>
+</div>
+<table>
+<thead><tr><th class="sku-col">SKU</th><th class="wine-col">Wine</th><th class="format-col">Format</th><th class="type-col">Type</th><th class="price-col">10+ boxes</th><th class="price-col">15+ boxes</th></tr></thead>
+<tbody>
+<tr data-type="white"><td class="sku-col">10106</td><td class="wine-name">Friulano Doc Collio</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;11.79</td><td class="price-discount">&euro;11.58</td></tr>
+<tr data-type="white"><td class="sku-col">10107</td><td class="wine-name">Malvasia Doc Collio</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;11.79</td><td class="price-discount">&euro;11.58</td></tr>
+<tr data-type="white"><td class="sku-col">10108</td><td class="wine-name">Pinot Bianco Doc Collio</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;11.79</td><td class="price-discount">&euro;11.58</td></tr>
+<tr data-type="white"><td class="sku-col">10109</td><td class="wine-name">Ribolla Gialla IGT Venezia Giulia</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;11.79</td><td class="price-discount">&euro;11.58</td></tr>
+<tr data-type="white"><td class="sku-col">10110</td><td class="wine-name">Collio Doc Bianco</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;13.89</td><td class="price-discount">&euro;13.68</td></tr>
+<tr data-type="red"><td class="sku-col">10111</td><td class="wine-name">Merlot Doc Collio</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;12.74</td><td class="price-discount">&euro;12.52</td></tr>
+<tr data-type="red"><td class="sku-col">10112</td><td class="wine-name">Decimo</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;24.39</td><td class="price-discount">&euro;24.18</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="region-section" id="trentino">
+<div class="region-header"><h2>Trentino</h2><span class="region-badge">1 Winery</span></div>
+
+<div class="cantina-card">
+<div class="cantina-header">
+  <div class="cantina-logo"><img src="https://images.squarespace-cdn.com/content/v1/589b041c1e5b6c546fd6d6ec/1498729827440-YWY1Z9EA03KMD9GWLVCH/Cadalora+col+nero+960px+%230.png?format=1500w" alt="La Cadalora"></div>
+  <div class="cantina-info"><h3>La Cadalora</h3><div class="cantina-meta">Trentino &middot; Via Trento, 44, 38061 Ala TN, Italia</div></div>
+</div>
+<table>
+<thead><tr><th class="sku-col">SKU</th><th class="wine-col">Wine</th><th class="format-col">Format</th><th class="type-col">Type</th><th class="price-col">10+ boxes</th><th class="price-col">15+ boxes</th></tr></thead>
+<tbody>
+<tr data-type="rosé"><td class="sku-col">10145</td><td class="wine-name"><img class="wine-thumb" src="https://marcdegrazia.com/wp-content/uploads/2023/02/bottle_la_cadalora_pinot_nero_rosato_buontempo.png" alt="">Buontempo Pinot Nero Rosato Vallagarina IGT 24</td><td class="format-col">750ml</td><td><span class="wine-type type-rose">Rosé</span></td><td class="price-col">&euro;10.08</td><td class="price-discount">&euro;9.84</td></tr>
+<tr data-type="white"><td class="sku-col">10146</td><td class="wine-name"><img class="wine-thumb" src="https://marcdegrazia.com/wp-content/uploads/2021/07/bottle_la_cadalora_vallagarina_chardonnay.png" alt="">Chardonnay 24</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;10.08</td><td class="price-discount">&euro;9.84</td></tr>
+<tr data-type="white"><td class="sku-col">10147</td><td class="wine-name"><img class="wine-thumb" src="https://marcdegrazia.com/wp-content/uploads/2021/07/bottle_la_cadalora_vallagarina_gewurztraminer.png" alt="">Gewurztraminer 24</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;10.80</td><td class="price-discount">&euro;10.57</td></tr>
+<tr data-type="red"><td class="sku-col">10148</td><td class="wine-name"><img class="wine-thumb" src="https://marcdegrazia.com/wp-content/uploads/2021/07/bottle_la_cadalora_casetta_vallagarina_majere.png" alt="">Majere Casetta 22</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;13.88</td><td class="price-discount">&euro;13.65</td></tr>
+<tr data-type="white"><td class="sku-col">10149</td><td class="wine-name"><img class="wine-thumb" src="https://marcdegrazia.com/wp-content/uploads/2021/07/bottle_la_cadalora_pinot_grigio_dolomiti_gazzi.png" alt="">Pinot Grigio Gazzi 23</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;13.04</td><td class="price-discount">&euro;12.81</td></tr>
+<tr data-type="white"><td class="sku-col">10150</td><td class="wine-name"><img class="wine-thumb" src="https://marcdegrazia.com/wp-content/uploads/2021/07/bottle_la_cadalora_pinot_grigio_dolomiti.png" alt="">Pinot Grigio Vigneti delle Dolomiti 24</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;10.13</td><td class="price-discount">&euro;9.90</td></tr>
+<tr data-type="red"><td class="sku-col">10151</td><td class="wine-name"><img class="wine-thumb" src="https://marcdegrazia.com/wp-content/uploads/2021/07/bottle_la_cadalora_pinot_nero_vignalet.png" alt="">Pinot Nero Vignalet Vallagarina 22</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;15.00</td><td class="price-discount">&euro;14.77</td></tr>
+<tr data-type="red"><td class="sku-col">10152</td><td class="wine-name">S.Valentino 24</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;10.13</td><td class="price-discount">&euro;9.90</td></tr>
+<tr data-type="white"><td class="sku-col">10153</td><td class="wine-name"><img class="wine-thumb" src="https://marcdegrazia.com/wp-content/uploads/2021/07/bottle_la_cadalora_vallagarina_sauvignon.png" alt="">Sauvignon 24</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;10.41</td><td class="price-discount">&euro;10.18</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="region-section" id="alto-adige">
+<div class="region-header"><h2>Alto Adige</h2><span class="region-badge">2 Wineries</span></div>
+
+<div class="cantina-card">
+<div class="cantina-header">
+  <div class="cantina-logo"><img src="https://putzenhof.it/img/putzenhof-light.svg" alt="Putzenohof"></div>
+  <div class="cantina-info"><h3>Putzenohof</h3><div class="cantina-meta">Alto Adige &middot; Via Anton Thaler 24, 39055 Leifers, Autonome Provinz Bozen - Südtirol, Italia</div></div>
+</div>
+<table>
+<thead><tr><th class="sku-col">SKU</th><th class="wine-col">Wine</th><th class="format-col">Format</th><th class="type-col">Type</th><th class="price-col">10+ boxes</th><th class="price-col">15+ boxes</th></tr></thead>
+<tbody>
+<tr data-type="red"><td class="sku-col">10086</td><td class="wine-name">Alto Adige Bozner Leiten 22</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;10.14</td><td class="price-discount">&euro;9.90</td></tr>
+<tr data-type="white"><td class="sku-col">10087</td><td class="wine-name">Alto Adige Kerner 24</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;12.66</td><td class="price-discount">&euro;12.42</td></tr>
+<tr data-type="red"><td class="sku-col">10088</td><td class="wine-name">Alto Adige Lagrein 22</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;12.49</td><td class="price-discount">&euro;12.26</td></tr>
+<tr data-type="red"><td class="sku-col">10089</td><td class="wine-name">Alto Adige Merlot 22</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;13.22</td><td class="price-discount">&euro;12.98</td></tr>
+<tr data-type="red"><td class="sku-col">10090</td><td class="wine-name">Alto Adige Pinot Nero 23</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;13.22</td><td class="price-discount">&euro;12.98</td></tr>
+<tr data-type="white"><td class="sku-col">10091</td><td class="wine-name">Alto Adige Sauvignon 24</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;12.10</td><td class="price-discount">&euro;11.86</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="cantina-card">
+<div class="cantina-header">
+  <div class="cantina-logo initials">R</div>
+  <div class="cantina-info"><h3>Raetia</h3><div class="cantina-meta">Alto Adige &middot; Strada del Vino, 23 - 39040 Cortaccia BZ</div></div>
+</div>
+<table>
+<thead><tr><th class="sku-col">SKU</th><th class="wine-col">Wine</th><th class="format-col">Format</th><th class="type-col">Type</th><th class="price-col">10+ boxes</th><th class="price-col">15+ boxes</th></tr></thead>
+<tbody>
+<tr data-type="white"><td class="sku-col">10167</td><td class="wine-name">Alto Adige Pinot Grigio Raetia 24 (Screw Cap)</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;8.18</td><td class="price-discount">&euro;7.94</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
 <section class="region-section" id="toscana">
 <div class="region-header"><h2>Toscana</h2><span class="region-badge">10 Wineries</span></div>
 
@@ -501,125 +628,55 @@ Radda in Chianti 53017</div></div>
 </div>
 </section>
 
-<section class="region-section" id="alto-adige">
-<div class="region-header"><h2>Alto Adige</h2><span class="region-badge">2 Wineries</span></div>
+<section class="region-section" id="marche">
+<div class="region-header"><h2>Marche</h2><span class="region-badge">2 Wineries</span></div>
 
 <div class="cantina-card">
 <div class="cantina-header">
-  <div class="cantina-logo"><img src="https://putzenhof.it/img/putzenhof-light.svg" alt="Putzenohof"></div>
-  <div class="cantina-info"><h3>Putzenohof</h3><div class="cantina-meta">Alto Adige &middot; Via Anton Thaler 24, 39055 Leifers, Autonome Provinz Bozen - Südtirol, Italia</div></div>
+  <div class="cantina-logo initials">Z</div>
+  <div class="cantina-info"><h3>Zena</h3><div class="cantina-meta">Castelli di Jesi &middot; Contrada Brecciole, 25, 60034 Cupramontana AN, Italia</div></div>
 </div>
 <table>
 <thead><tr><th class="sku-col">SKU</th><th class="wine-col">Wine</th><th class="format-col">Format</th><th class="type-col">Type</th><th class="price-col">10+ boxes</th><th class="price-col">15+ boxes</th></tr></thead>
 <tbody>
-<tr data-type="red"><td class="sku-col">10086</td><td class="wine-name">Alto Adige Bozner Leiten 22</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;10.14</td><td class="price-discount">&euro;9.90</td></tr>
-<tr data-type="white"><td class="sku-col">10087</td><td class="wine-name">Alto Adige Kerner 24</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;12.66</td><td class="price-discount">&euro;12.42</td></tr>
-<tr data-type="red"><td class="sku-col">10088</td><td class="wine-name">Alto Adige Lagrein 22</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;12.49</td><td class="price-discount">&euro;12.26</td></tr>
-<tr data-type="red"><td class="sku-col">10089</td><td class="wine-name">Alto Adige Merlot 22</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;13.22</td><td class="price-discount">&euro;12.98</td></tr>
-<tr data-type="red"><td class="sku-col">10090</td><td class="wine-name">Alto Adige Pinot Nero 23</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;13.22</td><td class="price-discount">&euro;12.98</td></tr>
-<tr data-type="white"><td class="sku-col">10091</td><td class="wine-name">Alto Adige Sauvignon 24</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;12.10</td><td class="price-discount">&euro;11.86</td></tr>
+<tr data-type="white"><td class="sku-col">10104</td><td class="wine-name">Verdicchio Classico Castelli di Jesi 24 (Bio)</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;8.83</td><td class="price-discount">&euro;8.62</td></tr>
+<tr data-type="white"><td class="sku-col">10105</td><td class="wine-name">Verdicchio Classico Superiore Castelli di Jesi 23 (Bio)</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;11.18</td><td class="price-discount">&euro;10.97</td></tr>
 </tbody>
 </table>
 </div>
 
 <div class="cantina-card">
 <div class="cantina-header">
-  <div class="cantina-logo initials">R</div>
-  <div class="cantina-info"><h3>Raetia</h3><div class="cantina-meta">Alto Adige &middot; Strada del Vino, 23 - 39040 Cortaccia BZ</div></div>
+  <div class="cantina-logo initials">VL</div>
+  <div class="cantina-info"><h3>Villa Ligi</h3><div class="cantina-meta">Pergola &middot; Via Zoccolanti 25/A, 61045 Pergola PU, Italia</div></div>
 </div>
 <table>
 <thead><tr><th class="sku-col">SKU</th><th class="wine-col">Wine</th><th class="format-col">Format</th><th class="type-col">Type</th><th class="price-col">10+ boxes</th><th class="price-col">15+ boxes</th></tr></thead>
 <tbody>
-<tr data-type="white"><td class="sku-col">10167</td><td class="wine-name">Alto Adige Pinot Grigio Raetia 24 (Screw Cap)</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;8.18</td><td class="price-discount">&euro;7.94</td></tr>
-</tbody>
-</table>
-</div>
-</section>
-
-<section class="region-section" id="trentino">
-<div class="region-header"><h2>Trentino</h2><span class="region-badge">1 Winery</span></div>
-
-<div class="cantina-card">
-<div class="cantina-header">
-  <div class="cantina-logo"><img src="https://images.squarespace-cdn.com/content/v1/589b041c1e5b6c546fd6d6ec/1498729827440-YWY1Z9EA03KMD9GWLVCH/Cadalora+col+nero+960px+%230.png?format=1500w" alt="La Cadalora"></div>
-  <div class="cantina-info"><h3>La Cadalora</h3><div class="cantina-meta">Trentino &middot; Via Trento, 44, 38061 Ala TN, Italia</div></div>
-</div>
-<table>
-<thead><tr><th class="sku-col">SKU</th><th class="wine-col">Wine</th><th class="format-col">Format</th><th class="type-col">Type</th><th class="price-col">10+ boxes</th><th class="price-col">15+ boxes</th></tr></thead>
-<tbody>
-<tr data-type="rosé"><td class="sku-col">10145</td><td class="wine-name"><img class="wine-thumb" src="https://marcdegrazia.com/wp-content/uploads/2023/02/bottle_la_cadalora_pinot_nero_rosato_buontempo.png" alt="">Buontempo Pinot Nero Rosato Vallagarina IGT 24</td><td class="format-col">750ml</td><td><span class="wine-type type-rose">Rosé</span></td><td class="price-col">&euro;10.08</td><td class="price-discount">&euro;9.84</td></tr>
-<tr data-type="white"><td class="sku-col">10146</td><td class="wine-name"><img class="wine-thumb" src="https://marcdegrazia.com/wp-content/uploads/2021/07/bottle_la_cadalora_vallagarina_chardonnay.png" alt="">Chardonnay 24</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;10.08</td><td class="price-discount">&euro;9.84</td></tr>
-<tr data-type="white"><td class="sku-col">10147</td><td class="wine-name"><img class="wine-thumb" src="https://marcdegrazia.com/wp-content/uploads/2021/07/bottle_la_cadalora_vallagarina_gewurztraminer.png" alt="">Gewurztraminer 24</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;10.80</td><td class="price-discount">&euro;10.57</td></tr>
-<tr data-type="red"><td class="sku-col">10148</td><td class="wine-name"><img class="wine-thumb" src="https://marcdegrazia.com/wp-content/uploads/2021/07/bottle_la_cadalora_casetta_vallagarina_majere.png" alt="">Majere Casetta 22</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;13.88</td><td class="price-discount">&euro;13.65</td></tr>
-<tr data-type="white"><td class="sku-col">10149</td><td class="wine-name"><img class="wine-thumb" src="https://marcdegrazia.com/wp-content/uploads/2021/07/bottle_la_cadalora_pinot_grigio_dolomiti_gazzi.png" alt="">Pinot Grigio Gazzi 23</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;13.04</td><td class="price-discount">&euro;12.81</td></tr>
-<tr data-type="white"><td class="sku-col">10150</td><td class="wine-name"><img class="wine-thumb" src="https://marcdegrazia.com/wp-content/uploads/2021/07/bottle_la_cadalora_pinot_grigio_dolomiti.png" alt="">Pinot Grigio Vigneti delle Dolomiti 24</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;10.13</td><td class="price-discount">&euro;9.90</td></tr>
-<tr data-type="red"><td class="sku-col">10151</td><td class="wine-name"><img class="wine-thumb" src="https://marcdegrazia.com/wp-content/uploads/2021/07/bottle_la_cadalora_pinot_nero_vignalet.png" alt="">Pinot Nero Vignalet Vallagarina 22</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;15.00</td><td class="price-discount">&euro;14.77</td></tr>
-<tr data-type="red"><td class="sku-col">10152</td><td class="wine-name">S.Valentino 24</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;10.13</td><td class="price-discount">&euro;9.90</td></tr>
-<tr data-type="white"><td class="sku-col">10153</td><td class="wine-name"><img class="wine-thumb" src="https://marcdegrazia.com/wp-content/uploads/2021/07/bottle_la_cadalora_vallagarina_sauvignon.png" alt="">Sauvignon 24</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;10.41</td><td class="price-discount">&euro;10.18</td></tr>
+<tr data-type="red"><td class="sku-col">10168</td><td class="wine-name">Albaspino 25</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;7.82</td><td class="price-discount">&euro;7.61</td></tr>
+<tr data-type="red"><td class="sku-col">10169</td><td class="wine-name">Grifoglietto 24</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;10.62</td><td class="price-discount">&euro;10.41</td></tr>
+<tr data-type="rosé"><td class="sku-col">10170</td><td class="wine-name">Pergola Rosato Fiori 25</td><td class="format-col">750ml</td><td><span class="wine-type type-rose">Rosé</span></td><td class="price-col">&euro;7.82</td><td class="price-discount">&euro;7.61</td></tr>
+<tr data-type="red"><td class="sku-col">10171</td><td class="wine-name">Vernaculum 25</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;7.82</td><td class="price-discount">&euro;7.61</td></tr>
 </tbody>
 </table>
 </div>
 </section>
 
-<section class="region-section" id="veneto">
-<div class="region-header"><h2>Veneto</h2><span class="region-badge">1 Winery</span></div>
+<section class="region-section" id="lazio">
+<div class="region-header"><h2>Lazio</h2><span class="region-badge">1 Winery</span></div>
 
 <div class="cantina-card">
 <div class="cantina-header">
-  <div class="cantina-logo"><img src="https://martignago.wine/wp-content/uploads/2022/02/logo-martignago-vinaioli-1.png" alt="Martignago"></div>
-  <div class="cantina-info"><h3>Martignago</h3><div class="cantina-meta">Asolo Prosecco &middot; Via Cornuda, 72, 31010 Maser TV, Italia</div></div>
+  <div class="cantina-logo initials">BD</div>
+  <div class="cantina-info"><h3>Borgo del Cedro</h3><div class="cantina-meta">Roma / Frascati &middot; Via Frascati Colonna 29, 00078, Monte Porzio Catone (RM)</div></div>
 </div>
 <table>
 <thead><tr><th class="sku-col">SKU</th><th class="wine-col">Wine</th><th class="format-col">Format</th><th class="type-col">Type</th><th class="price-col">10+ boxes</th><th class="price-col">15+ boxes</th></tr></thead>
 <tbody>
-<tr data-type="sparkling"><td class="sku-col">10075</td><td class="wine-name">Colli Trevigiani Colfondo Agricolo 21</td><td class="format-col">750ml</td><td><span class="wine-type type-sparkling">Sparkling</span></td><td class="price-col">&euro;9.22</td><td class="price-discount">&euro;9.01</td></tr>
-<tr data-type="sparkling"><td class="sku-col">10076</td><td class="wine-name">Prosecco Superiore Asolo Brut 24</td><td class="format-col">750ml</td><td><span class="wine-type type-sparkling">Sparkling</span></td><td class="price-col">&euro;9.22</td><td class="price-discount">&euro;9.01</td></tr>
-<tr data-type="sparkling"><td class="sku-col">10077</td><td class="wine-name">Prosecco Superiore Asolo Extra Brut 24</td><td class="format-col">750ml</td><td><span class="wine-type type-sparkling">Sparkling</span></td><td class="price-col">&euro;9.22</td><td class="price-discount">&euro;9.01</td></tr>
-<tr data-type="sparkling"><td class="sku-col">10078</td><td class="wine-name">Prosecco Superiore Asolo Extra Dry 24</td><td class="format-col">750ml</td><td><span class="wine-type type-sparkling">Sparkling</span></td><td class="price-col">&euro;9.22</td><td class="price-discount">&euro;9.01</td></tr>
-<tr data-type="sparkling"><td class="sku-col">10079</td><td class="wine-name">Rosato Brut 23</td><td class="format-col">750ml</td><td><span class="wine-type type-sparkling">Sparkling</span></td><td class="price-col">&euro;8.21</td><td class="price-discount">&euro;8.00</td></tr>
-</tbody>
-</table>
-</div>
-</section>
-
-<section class="region-section" id="friuli">
-<div class="region-header"><h2>Friuli</h2><span class="region-badge">1 Winery</span></div>
-
-<div class="cantina-card">
-<div class="cantina-header">
-  <div class="cantina-logo"><img src="https://arteinvigna.com/wp-content/uploads/2020/09/terre-del-faet.jpg" alt="Terre del Faet"></div>
-  <div class="cantina-info"><h3>Terre del Faet</h3><div class="cantina-meta">Collio &middot; Viale Roma, 82, 34071 Cormons GO, Italia</div></div>
-</div>
-<table>
-<thead><tr><th class="sku-col">SKU</th><th class="wine-col">Wine</th><th class="format-col">Format</th><th class="type-col">Type</th><th class="price-col">10+ boxes</th><th class="price-col">15+ boxes</th></tr></thead>
-<tbody>
-<tr data-type="white"><td class="sku-col">10106</td><td class="wine-name">Friulano Doc Collio</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;11.79</td><td class="price-discount">&euro;11.58</td></tr>
-<tr data-type="white"><td class="sku-col">10107</td><td class="wine-name">Malvasia Doc Collio</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;11.79</td><td class="price-discount">&euro;11.58</td></tr>
-<tr data-type="white"><td class="sku-col">10108</td><td class="wine-name">Pinot Bianco Doc Collio</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;11.79</td><td class="price-discount">&euro;11.58</td></tr>
-<tr data-type="white"><td class="sku-col">10109</td><td class="wine-name">Ribolla Gialla IGT Venezia Giulia</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;11.79</td><td class="price-discount">&euro;11.58</td></tr>
-<tr data-type="white"><td class="sku-col">10110</td><td class="wine-name">Collio Doc Bianco</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;13.89</td><td class="price-discount">&euro;13.68</td></tr>
-<tr data-type="red"><td class="sku-col">10111</td><td class="wine-name">Merlot Doc Collio</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;12.74</td><td class="price-discount">&euro;12.52</td></tr>
-<tr data-type="red"><td class="sku-col">10112</td><td class="wine-name">Decimo</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;24.39</td><td class="price-discount">&euro;24.18</td></tr>
-</tbody>
-</table>
-</div>
-</section>
-
-<section class="region-section" id="lombardia">
-<div class="region-header"><h2>Lombardia</h2><span class="region-badge">1 Winery</span></div>
-
-<div class="cantina-card">
-<div class="cantina-header">
-  <div class="cantina-logo"><img src="https://merkador.it/Varie/CATALOGO%20VINERIA/LOGO%20RADIS.jpg" alt="Radis"></div>
-  <div class="cantina-info"><h3>Radis</h3><div class="cantina-meta">Valtellina &middot; Via Stelvio, 18, 23037 Tirano SO, Italia</div></div>
-</div>
-<table>
-<thead><tr><th class="sku-col">SKU</th><th class="wine-col">Wine</th><th class="format-col">Format</th><th class="type-col">Type</th><th class="price-col">10+ boxes</th><th class="price-col">15+ boxes</th></tr></thead>
-<tbody>
-<tr data-type="red"><td class="sku-col">10006</td><td class="wine-name">Valtellina Superiore DOCG Baitèi 2022</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;14.92</td><td class="price-discount">&euro;14.72</td></tr>
-<tr data-type="red"><td class="sku-col">10007</td><td class="wine-name">Rosso di Valtellina DOC Muràchi 2023</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;11.77</td><td class="price-discount">&euro;11.57</td></tr>
-<tr data-type="rosé"><td class="sku-col">10008</td><td class="wine-name">Alpi Retiche IGT Rosato Stuètt 2025</td><td class="format-col">750ml</td><td><span class="wine-type type-rose">Rosé</span></td><td class="price-col">&euro;12.82</td><td class="price-discount">&euro;12.62</td></tr>
-<tr data-type="red"><td class="sku-col">10009</td><td class="wine-name">Valtellina Superiore DOCG Baitèi 2021</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;15.97</td><td class="price-discount">&euro;15.77</td></tr>
+<tr data-type="white"><td class="sku-col">10126</td><td class="wine-name"><img class="wine-thumb" src="https://marcdegrazia.com/wp-content/uploads/2023/05/bottle_costantini_frascati_superiore_filiae.png" alt="">Filiae Frascati Superiore 24</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;8.34</td><td class="price-discount">&euro;8.08</td></tr>
+<tr data-type="red"><td class="sku-col">10127</td><td class="wine-name"><img class="wine-thumb" src="https://marcdegrazia.com/wp-content/uploads/2023/05/bottle_costantini_lazio_rosso_parentes.png" alt="">Parentes Lazio Rosso 24</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;10.18</td><td class="price-discount">&euro;9.93</td></tr>
+<tr data-type="red"><td class="sku-col">10128</td><td class="wine-name"><img class="wine-thumb" src="https://marcdegrazia.com/wp-content/uploads/2023/05/bottle_costantini-roma-rosso-silicea.png" alt="">Silicea Roma Rosso 24</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;10.18</td><td class="price-discount">&euro;9.93</td></tr>
+<tr data-type="white"><td class="sku-col">10129</td><td class="wine-name"><img class="wine-thumb" src="https://marcdegrazia.com/wp-content/uploads/2023/05/bottle_costantini-roma-malvasia-puntinata-topho.png" alt="">Topho Roma Malvasia Puntinata 24</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;9.74</td><td class="price-discount">&euro;9.48</td></tr>
 </tbody>
 </table>
 </div>
@@ -678,80 +735,6 @@ Radda in Chianti 53017</div></div>
 </div>
 </section>
 
-<section class="region-section" id="lazio">
-<div class="region-header"><h2>Lazio</h2><span class="region-badge">1 Winery</span></div>
-
-<div class="cantina-card">
-<div class="cantina-header">
-  <div class="cantina-logo initials">BD</div>
-  <div class="cantina-info"><h3>Borgo del Cedro</h3><div class="cantina-meta">Roma / Frascati &middot; Via Frascati Colonna 29, 00078, Monte Porzio Catone (RM)</div></div>
-</div>
-<table>
-<thead><tr><th class="sku-col">SKU</th><th class="wine-col">Wine</th><th class="format-col">Format</th><th class="type-col">Type</th><th class="price-col">10+ boxes</th><th class="price-col">15+ boxes</th></tr></thead>
-<tbody>
-<tr data-type="white"><td class="sku-col">10126</td><td class="wine-name"><img class="wine-thumb" src="https://marcdegrazia.com/wp-content/uploads/2023/05/bottle_costantini_frascati_superiore_filiae.png" alt="">Filiae Frascati Superiore 24</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;8.34</td><td class="price-discount">&euro;8.08</td></tr>
-<tr data-type="red"><td class="sku-col">10127</td><td class="wine-name"><img class="wine-thumb" src="https://marcdegrazia.com/wp-content/uploads/2023/05/bottle_costantini_lazio_rosso_parentes.png" alt="">Parentes Lazio Rosso 24</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;10.18</td><td class="price-discount">&euro;9.93</td></tr>
-<tr data-type="red"><td class="sku-col">10128</td><td class="wine-name"><img class="wine-thumb" src="https://marcdegrazia.com/wp-content/uploads/2023/05/bottle_costantini-roma-rosso-silicea.png" alt="">Silicea Roma Rosso 24</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;10.18</td><td class="price-discount">&euro;9.93</td></tr>
-<tr data-type="white"><td class="sku-col">10129</td><td class="wine-name"><img class="wine-thumb" src="https://marcdegrazia.com/wp-content/uploads/2023/05/bottle_costantini-roma-malvasia-puntinata-topho.png" alt="">Topho Roma Malvasia Puntinata 24</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;9.74</td><td class="price-discount">&euro;9.48</td></tr>
-</tbody>
-</table>
-</div>
-</section>
-
-<section class="region-section" id="marche">
-<div class="region-header"><h2>Marche</h2><span class="region-badge">2 Wineries</span></div>
-
-<div class="cantina-card">
-<div class="cantina-header">
-  <div class="cantina-logo initials">Z</div>
-  <div class="cantina-info"><h3>Zena</h3><div class="cantina-meta">Castelli di Jesi &middot; Contrada Brecciole, 25, 60034 Cupramontana AN, Italia</div></div>
-</div>
-<table>
-<thead><tr><th class="sku-col">SKU</th><th class="wine-col">Wine</th><th class="format-col">Format</th><th class="type-col">Type</th><th class="price-col">10+ boxes</th><th class="price-col">15+ boxes</th></tr></thead>
-<tbody>
-<tr data-type="white"><td class="sku-col">10104</td><td class="wine-name">Verdicchio Classico Castelli di Jesi 24 (Bio)</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;8.83</td><td class="price-discount">&euro;8.62</td></tr>
-<tr data-type="white"><td class="sku-col">10105</td><td class="wine-name">Verdicchio Classico Superiore Castelli di Jesi 23 (Bio)</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;11.18</td><td class="price-discount">&euro;10.97</td></tr>
-</tbody>
-</table>
-</div>
-
-<div class="cantina-card">
-<div class="cantina-header">
-  <div class="cantina-logo initials">VL</div>
-  <div class="cantina-info"><h3>Villa Ligi</h3><div class="cantina-meta">Pergola &middot; Via Zoccolanti 25/A, 61045 Pergola PU, Italia</div></div>
-</div>
-<table>
-<thead><tr><th class="sku-col">SKU</th><th class="wine-col">Wine</th><th class="format-col">Format</th><th class="type-col">Type</th><th class="price-col">10+ boxes</th><th class="price-col">15+ boxes</th></tr></thead>
-<tbody>
-<tr data-type="red"><td class="sku-col">10168</td><td class="wine-name">Albaspino 25</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;7.82</td><td class="price-discount">&euro;7.61</td></tr>
-<tr data-type="red"><td class="sku-col">10169</td><td class="wine-name">Grifoglietto 24</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;10.62</td><td class="price-discount">&euro;10.41</td></tr>
-<tr data-type="rosé"><td class="sku-col">10170</td><td class="wine-name">Pergola Rosato Fiori 25</td><td class="format-col">750ml</td><td><span class="wine-type type-rose">Rosé</span></td><td class="price-col">&euro;7.82</td><td class="price-discount">&euro;7.61</td></tr>
-<tr data-type="red"><td class="sku-col">10171</td><td class="wine-name">Vernaculum 25</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;7.82</td><td class="price-discount">&euro;7.61</td></tr>
-</tbody>
-</table>
-</div>
-</section>
-
-<section class="region-section" id="sardegna">
-<div class="region-header"><h2>Sardegna</h2><span class="region-badge">1 Winery</span></div>
-
-<div class="cantina-card">
-<div class="cantina-header">
-  <div class="cantina-logo"><img src="https://www.cantinacanneddu.it/wp-content/uploads/2016/12/logo-canneddu_negativo-oro-1024x1024.png" alt="Canneddu"></div>
-  <div class="cantina-info"><h3>Canneddu</h3><div class="cantina-meta">Barbagia &middot; Via Manno, 69, 08024 Mamoiada NU, Italia</div></div>
-</div>
-<table>
-<thead><tr><th class="sku-col">SKU</th><th class="wine-col">Wine</th><th class="format-col">Format</th><th class="type-col">Type</th><th class="price-col">10+ boxes</th><th class="price-col">15+ boxes</th></tr></thead>
-<tbody>
-<tr data-type="red"><td class="sku-col">10021</td><td class="wine-name">Zibbo - Cannonau di Sardegna DOC</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;16.27</td><td class="price-discount">&euro;15.97</td></tr>
-<tr data-type="red"><td class="sku-col">10022</td><td class="wine-name">Zimò - Barbagia Rosso IGT</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;12.07</td><td class="price-discount">&euro;11.77</td></tr>
-<tr data-type="rosé"><td class="sku-col">10023</td><td class="wine-name">Rosè - Barbagia Rosato IGT</td><td class="format-col">750ml</td><td><span class="wine-type type-rose">Rosé</span></td><td class="price-col">&euro;12.07</td><td class="price-discount">&euro;11.77</td></tr>
-<tr data-type="white"><td class="sku-col">10024</td><td class="wine-name">Delissia - Vino Bianco</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;15.22</td><td class="price-discount">&euro;14.92</td></tr>
-</tbody>
-</table>
-</div>
-</section>
-
 <section class="region-section" id="sicilia">
 <div class="region-header"><h2>Sicilia</h2><span class="region-badge">2 Wineries</span></div>
 
@@ -792,12 +775,32 @@ Radda in Chianti 53017</div></div>
 </div>
 </section>
 
+<section class="region-section" id="sardegna">
+<div class="region-header"><h2>Sardegna</h2><span class="region-badge">1 Winery</span></div>
+
+<div class="cantina-card">
+<div class="cantina-header">
+  <div class="cantina-logo"><img src="https://www.cantinacanneddu.it/wp-content/uploads/2016/12/logo-canneddu_negativo-oro-1024x1024.png" alt="Canneddu"></div>
+  <div class="cantina-info"><h3>Canneddu</h3><div class="cantina-meta">Barbagia &middot; Via Manno, 69, 08024 Mamoiada NU, Italia</div></div>
+</div>
+<table>
+<thead><tr><th class="sku-col">SKU</th><th class="wine-col">Wine</th><th class="format-col">Format</th><th class="type-col">Type</th><th class="price-col">10+ boxes</th><th class="price-col">15+ boxes</th></tr></thead>
+<tbody>
+<tr data-type="red"><td class="sku-col">10021</td><td class="wine-name">Zibbo - Cannonau di Sardegna DOC</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;16.27</td><td class="price-discount">&euro;15.97</td></tr>
+<tr data-type="red"><td class="sku-col">10022</td><td class="wine-name">Zimò - Barbagia Rosso IGT</td><td class="format-col">750ml</td><td><span class="wine-type type-red">Red</span></td><td class="price-col">&euro;12.07</td><td class="price-discount">&euro;11.77</td></tr>
+<tr data-type="rosé"><td class="sku-col">10023</td><td class="wine-name">Rosè - Barbagia Rosato IGT</td><td class="format-col">750ml</td><td><span class="wine-type type-rose">Rosé</span></td><td class="price-col">&euro;12.07</td><td class="price-discount">&euro;11.77</td></tr>
+<tr data-type="white"><td class="sku-col">10024</td><td class="wine-name">Delissia - Vino Bianco</td><td class="format-col">750ml</td><td><span class="wine-type type-white">White</span></td><td class="price-col">&euro;15.22</td><td class="price-discount">&euro;14.92</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
 </div>
 
 <footer>
   <p><strong>La Vineria</strong> &mdash; Wine Export Catalog 2025/2026</p>
   <p style="margin-top:8px; font-size:0.75rem;">All prices DDP per bottle in EUR. Minimum order: 50 boxes. Minimum 10 boxes per producer.</p>
-  <p style="margin-top:8px; font-size:0.7rem; opacity:0.7;">Last update: 11/02/2026 11:22</p>
+  <p style="margin-top:8px; font-size:0.7rem; opacity:0.7;">Last update: 11/02/2026 12:21</p>
 </footer>
 
 <a class="whatsapp-btn" href="https://wa.me/31182796007?text=Hello%20La%20Vineria%2C%20I%20would%20like%20to%20request%20information%20about%20your%20wine%20catalog." target="_blank" title="Contact us on WhatsApp">
